@@ -1,18 +1,22 @@
 # a-julia-bert-client
 
-1. download model, then run [bert-as-service](https://github.com/hanxiao/bert-as-service)
+1. download [model](https://github.com/google-research/bert), then run [bert-as-service](https://github.com/hanxiao/bert-as-service)
+    ``` shell
 
-    > pip install bert-serving-server
+     pip install bert-serving-server
 
-    > bert-serving-start -model_dir ./model_dir -num_worker=4
+     bert-serving-start -model_dir ./model_dir -num_worker=4
+    ``` 
     
 2. in julia
 
-    > include("BertClient.jl")
+    ``` julia
+     include("BertClient.jl")
     
-    > BertClient.bert_encode(str)
+     BertClient.bert_encode(str)
+    ```
     
-    bert_encode( array ) is also okay
+    bert_encode( [str1,str2,...] ) is also okay
     
     bert_init() is optional, 
     
@@ -20,7 +24,7 @@
 
 ---
 
-not quite familiar with writing julia packages, so just a script... mainly no idea how to.. pack?
+remember to install tensorflow-gpu for (server side) better performance
 
-you can also copy code from this .jl to simplify operations
+no need to pack into a package I guess?
 
