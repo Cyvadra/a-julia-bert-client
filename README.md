@@ -12,7 +12,7 @@
 
     ``` julia
     julia> include("BertClient.jl")
-    julia> bert_encode("我能吞下玻璃而不伤身体")
+    julia> BertClient.bert_encode("我能吞下玻璃而不伤身体")
                 768-element Array{Float32,1}:
                   0.63951504 
                   0.11443944 
