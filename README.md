@@ -11,9 +11,21 @@
 2. in julia
 
     ``` julia
-     include("BertClient.jl")
-    
-     BertClient.bert_encode(str)
+    julia> include("BertClient.jl")
+    julia> bert_encode("我能吞下玻璃而不伤身体")
+                768-element Array{Float32,1}:
+                  0.63951504 
+                  0.11443944 
+                 -0.09068978 
+                  0.011962767
+                  0.19503269 
+                 -0.5136112  
+                 -0.28722548 
+                 -0.24000126 
+                 -0.09366071 
+                  0.9944896  
+                  0.11499034 
+                ⋮ 
     ```
     
     bert_encode( [str1,str2,...] ) is also okay
@@ -26,5 +38,9 @@
 
 remember to install tensorflow-gpu for (server side) better performance
 
-no need to pack into a package I guess?
+
+### notice
+
+    bert-as-service may not be stable when not optimized
+
 
